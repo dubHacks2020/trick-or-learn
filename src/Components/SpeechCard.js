@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from "react-redux";
 import IconButton from '@material-ui/core/IconButton';
 import MicIcon from '@material-ui/icons/Mic';
@@ -10,13 +10,58 @@ import Button from '@material-ui/core/Button';
 import { speechToText } from "../redux/actions"
 import { getText } from "../redux/selectors"
 
+const SpeechRecognition =
+  window.SpeechRecognition || window.webkitSpeechRecognition
+const mic = new SpeechRecognition()
+
+mic.continuous = true
+mic.interimResults = true
+mic.lang = 'fr-FR'
+
 const SpeechCard = ({ text, speechToText }) => {
+    const [isListening, setIsListening] = useState(false)
+
+    useEffect(() => {
+        handleListen()
+    }, [isListening])
+
+    const handleListen = () => {
+        if (isListening) {
+          mic.start()
+          mic.onend = () => {
+            console.log('continue..')
+            mic.start()
+          }
+        } else {
+          mic.stop()
+          mic.onend = () => {
+            console.log('Stopped Mic on Click')
+          }
+        }
+        mic.onstart = () => {
+          console.log('Mics on')
+        }
+    
+        mic.onresult = event => {
+          const transcript = Array.from(event.results)
+            .map(result => result[0])
+            .map(result => result.transcript)
+            .join('')
+          console.log(transcript)
+          speechToText(transcript)
+          mic.onerror = event => {
+            console.log(event.error)
+          }
+        }
+      }
+
     return (
         <Card className="w5 tc ma2">
             <div className="flex ma2">
                 <IconButton
                     color="primary"
                     aria-label="speech to text"
+                    onClick={() => setIsListening(prevState => !prevState)}
                 //onClick= make api call to listen to speech..
                 // api returns text and adds it to state to be displayed
                 >

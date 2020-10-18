@@ -1,3 +1,16 @@
+#########################################
+NOTE
+#########################################
+Things you may need to install before running: 
+### npm install
+### npm install react-router-dom
+### npm install @material-ui/core
+### npm install material-ui/icons
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

@@ -4,6 +4,7 @@ import CardManager from './Components/CardManager.js';
 import Game from './Components/Game.js';
 import Home from './Components/Home.js';
 import './App.css';
+import SpeechCard from './SpeechCard';
 
 function App() {
   return (

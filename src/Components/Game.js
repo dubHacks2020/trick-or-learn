@@ -10,7 +10,7 @@ class Game extends React.Component {
         super(props);
         this.state = {
             // array of [question, ans]
-            flashcards: [["q1", "a1"], ["q2", "a2"], ["q3", "a3"]],
+            flashcards: [["dog", "a1"], ["cat", "a2"], ["bird", "a3"]],
             // array of numbers from 0 ... flashcards.size-1 in random order
             order: [2, 3, 1]
         }

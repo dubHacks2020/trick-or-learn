@@ -1,3 +1,4 @@
+// need to download sox and node-record-lpcm16 to run this in terminal
 const recorder = require('node-record-lpcm16');
 
 // Imports the Google Cloud client library
@@ -9,9 +10,9 @@ const client = new speech.SpeechClient();
 //
 const encoding = 'LINEAR16';
 const sampleRateHertz = 16000;
-const languageCode = 'en-US';
-// French: 
-// const languageCode = 'fr-FR';
+const languageCode = 'fr-FR';
+// English: 
+// const languageCode = 'en-US';
 
 const request = {
   config: {

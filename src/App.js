@@ -1,27 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Switch, Route, BrowserRouter as Router} from "react-router-dom";
+import CardManager from './Components/CardManager.js';
+import Game from './Components/Game.js';
+import Home from './Components/Home.js';
 import './App.css';
 import SpeechCard from './SpeechCard';
 
 function App() {
   return (
-    <SpeechCard />
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
+    <div className="App">
+      <Router>
+        <header className="App-header">TRICK</header>
+        <body>
+          <Switch>
+            <div>
+              <Route exact path={'/'}>
+                <Home/>
+              </Route>
+              <Route exact path={'/Game'}>
+                <Game/>
+              </Route>
+              <Route exact path={'/Card_Manager'}>
+                <CardManager/>
+              </Route>
+              <Route exact path={'/Instructions'}>
+                hello
+              </Route>
+            </div>
+          </Switch>
+        </body>
+      </Router>
+    </div>
   );
 }
 

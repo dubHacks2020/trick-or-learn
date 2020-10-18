@@ -1,31 +1,17 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  background-color: #F7F7F7;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #F7F7F7;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
+  color: black;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +21,144 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.home-buttons {
+  color: white;
+  background-color: #282c34;
+  display: block; 
+  justify-content: center;
+  border: none;
+  font-size: 30px;
+  margin: 10px;
+  padding: 20px;
+}
+
+.home-buttons-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: none;
+}
+
+.home-body {
+  min-height: 90vh;
+  background-color: white;
+}
+
+.home-title {
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links {
+  color: white;
+  text-decoration: none;
+}
+
+@keyframes walk1 {
+  0% {opacity: 0; left: 1500px;}
+  10% {opacity: 1;}
+  99.9% {opacity: 1;}
+  100% {left: -1900px; opacity: 0}
+}
+
+@keyframes walk2 {
+  0% {opacity: 0; left: 1500px;}
+  10% {opacity: 1;}
+  98% {opacity: 1;}
+  100% {left: -1500px; opacity: 0}
+}
+
+@keyframes walk3 {
+  0% {opacity: 0; left: 1500px;}
+  10% {opacity: 1;}
+  98% {opacity: 1;}
+  100% {left: -1000px; opacity: 0}
+}
+
+@keyframes fade {
+  0% {opacity: 1;}
+  100% {opacity: 0}
+}
+@keyframes damage {
+  0% {opacity: 0;}
+  30% {opacity: 1; }
+  60% {opacity: 0; }
+  100% {opacity: 1; }
+}
+
+.sprite {
+  max-height: 100%;
+}
+
+.sprite-card {
+  margin-top: 5vh;
+}
+
+.enemy1, .enemy2, .enemy3 {
+  margin-top: 10vh;
+  max-height: 100%;
+  right: -1000px;
+  height: 30vh;
+  font-size: 40px;
+  position: absolute;
+  display: block;
+  animation-duration: 10s; 
+  animation-fill-mode: forwards; 
+  animation-iteration-count: 1; 
+  animation-timing-function: linear; 
+  z-index: 100; 
+}
+
+.enemy1 {
+  animation-name: walk1;
+  animation-delay: 0s;
+}
+
+.enemy2 {
+  animation-delay: 8s;
+  animation-name: walk2;
+}
+
+.enemy3 {
+  animation-delay: 16s;
+  animation-name: walk3;
+}
+
+.Player {
+  margin-left: 10vh;
+  margin-top: 2vh;
+  height: 40vh;
+  animation-name: damage; 
+  animation-duration: 1s; 
+  animation-fill-mode: forwards; 
+  animation-iteration-count: 1; 
+  animation-timing-function: linear; 
+  animation-delay: 10s;
+}
+
+.game-graphics {
+  display: flex;
+}
+
+.Heart1, .Heart2, .Heart3 {
+  max-height: 100%;
+}
+
+.Heart3 {
+  animation-name: fade; 
+  animation-duration: 1; 
+  animation-fill-mode: forwards; 
+  animation-iteration-count: 1; 
+  animation-timing-function: linear; 
+  animation-delay: 10s;
+}
+
+.lives {
+  display: flex;
+  height: 5vh;
+  margin-top: 5vh;
+  margin-left: 12vh;
 }

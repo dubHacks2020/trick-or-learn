@@ -1,7 +1,8 @@
 import React from "react";
-import Player from "./Player.js"
-import Enemy from "./Enemy.js"
-import "../App.css"
+import Player from "./Player.js";
+import Enemy from "./Enemy.js";
+import SpeechCard from "./SpeechCard.js";
+import "../App.css";
 
 
 class Game extends React.Component {
@@ -18,16 +19,19 @@ class Game extends React.Component {
     render() {
         const { flashcards, order } = this.state;
         return (
-            <div className="game-graphics">
-                <div>
-                <Player myClassName="player" lives={3} />
+            <div>
+                <div className="game-graphics">
+                    <div>
+                        <Player myClassName="player" lives={3} />
+                    </div>
+                    <div className="enemies">
+                        < Enemy question={flashcards[0][0]} myClassName="enemy1" />
+                        < Enemy question={flashcards[2][0]} myClassName="enemy2" />
+                        < Enemy question={flashcards[1][0]} myClassName="enemy3" />
+                    </div>
                 </div>
-                <div className="enemies">
-                < Enemy question={flashcards[0][0]} myClassName="enemy1" />
-                < Enemy question={flashcards[2][0]} myClassName="enemy2" />
-                < Enemy question={flashcards[1][0]} myClassName="enemy3" />
-                </div>
-            </div>
+                <SpeechCard/>
+             </div>
         )
     }
 }

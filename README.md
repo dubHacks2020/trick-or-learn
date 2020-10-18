@@ -1,6 +1,6 @@
 ## Note: 
 
-Things you may need to install before running: 
+Things you may need before running: 
 
 ### npm install
 ### npm install react-router-dom

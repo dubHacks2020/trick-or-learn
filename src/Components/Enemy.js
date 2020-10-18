@@ -10,8 +10,6 @@ class Enemy extends React.Component {
             myClassName: props.myClassName,
             status: "alive", 
             question: props.question,
-            xpos: 0,
-            ypos: 0
         }
     }
 

@@ -1,6 +1,7 @@
 import React from "react";
 import "../App.css";
 import { Link } from "react-router-dom";
+import TitleJack from '../images/title.png';
 
 class Home extends React.Component {
     constructor(props) {
@@ -12,18 +13,18 @@ class Home extends React.Component {
         return (
             <div className="home-body">
                 <div className="home-title">
-                    title here
+                    <img src={TitleJack} className="titlejack"/>
                 </div>
                 <div className="home-buttons-container">
-                    <button className="home-buttons">
-                        <Link className={"nav-links"} to={'/Game'}> Start Game </Link>
-                    </button>
-                    <button className="home-buttons">
-                    <Link className={"nav-links"} to={'/Card_Manager'}> Manage Deck </Link>
-                    </button>
-                    <button className="home-buttons"> 
-                        <Link className={"nav-links"} to={'/Instructions'}> Instructions </Link>
-                    </button>
+                    <Link className={"nav-links"} to={'/Card_Manager'}> 
+                        <button className="home-buttons">Manage Deck</button>
+                    </Link>
+                    <Link className={"nav-links"} to={'/Game'}> 
+                        <button className="home-buttons">Start Game</button>
+                    </Link> 
+                    <Link className={"nav-links"} to={'/Instructions'}> 
+                        <button className="home-buttons">Instructions</button>
+                    </Link>
                 </div>
 
             </div>

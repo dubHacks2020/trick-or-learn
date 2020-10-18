@@ -1,12 +1,11 @@
-#########################################
-NOTE
-#########################################
+## Note: 
+
 Things you may need to install before running: 
+
 ### npm install
 ### npm install react-router-dom
 ### npm install @material-ui/core
 ### npm install material-ui/icons
-
 
 
 

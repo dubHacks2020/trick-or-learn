@@ -162,3 +162,18 @@
   margin-top: 5vh;
   margin-left: 12vh;
 }
+
+
+.speech-container {
+  margin-left: 10vh;
+  max-height: 20vh;
+  margin-top: 3vh;
+  display: flex;
+  align-items: center;
+  zoom: 1.5;
+}
+
+.game {
+  height: 90vh;
+  display: block;
+}

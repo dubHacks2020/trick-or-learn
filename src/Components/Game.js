@@ -10,9 +10,10 @@ class Game extends React.Component {
         super(props);
         this.state = {
             // array of [question, ans]
-            flashcards: [["dog", "a1"], ["cat", "a2"], ["bird", "a3"]],
+            flashcards: [["dog", "chien"], ["cat", "chat"], ["bird", "oiseau"]],
             // array of numbers from 0 ... flashcards.size-1 in random order
-            order: [2, 3, 1]
+            order: [2, 3, 1],
+            alive: [true, true, true]
         }
     }
 
@@ -25,9 +26,15 @@ class Game extends React.Component {
                         <Player myClassName="player" lives={3} />
                     </div>
                     <div>
-                        < Enemy question={flashcards[0][0]} myClassName="enemy1" />
-                        < Enemy question={flashcards[1][0]} myClassName="enemy2" />
-                        < Enemy question={flashcards[2][0]} myClassName="enemy3" />
+                        {this.state.alive[0] &&
+                            < Enemy question={flashcards[0][0]} myClassName="enemy1" />
+                        }
+                        {this.state.alive[1] &&
+                            < Enemy question={flashcards[1][0]} myClassName="enemy2" />
+                        }
+                        {this.state.alive[2] &&
+                            < Enemy question={flashcards[2][0]} myClassName="enemy3" />
+                        }
                     </div>
                 </div>
                 <div className="speech-container">

@@ -1,5 +1,5 @@
 import React from "react";
-import EnemySprite from '../images/jackolantern.png';
+import EnemySprite from '../images/eviljackolantern.png';
 import "../App.css"
 
 

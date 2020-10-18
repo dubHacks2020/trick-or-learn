@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <header className="App-header">header</header>
+        <header className="App-header">TRICK</header>
         <body>
           <Switch>
             <div>

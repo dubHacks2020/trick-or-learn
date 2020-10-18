@@ -3,6 +3,7 @@ import { Switch, Route, BrowserRouter as Router} from "react-router-dom";
 import CardManager from './Components/CardManager.js';
 import Game from './Components/Game.js';
 import Home from './Components/Home.js';
+import Instructions from './Components/Instructions.js';
 import './App.css';
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
                 <CardManager/>
               </Route>
               <Route exact path={'/Instructions'}>
-                hello
+                <Instructions/>
               </Route>
             </div>
           </Switch>

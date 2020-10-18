@@ -14,13 +14,47 @@
   color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.CardManager-body {
+  height: 90vh;
+}
+
+.CardManager-container {
+  height: 70vh;
+  margin-right: 80vh;
+  margin-left: 10vh;
+  color: blue;
+}
+
+.manage-buttons-container {
+  display: flex;
+  margin-top: 5vh;
+  margin-left: 10vh;
+}
+
+.instructions-body {
+  height: 90vh;
+}
+
+.back-button {
+  font-size: 30px;
+  bottom: 30px;
+  left: 4vh;
+  position: absolute;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  padding-right: 3vh;
+  padding-left: 3vh;
+  border: none;
+  background-color: #F7F7F7;
+}
+
+.instructions-container {
+  height: 80vh;
+  padding-left: 10vh;
+}
+
+.instructions, .cards {
+  max-height: 100%;
 }
 
 .home-buttons {
@@ -33,7 +67,7 @@
   padding: 20px;
 }
 
-.home-buttons:hover {
+.home-buttons:hover, .back-button:hover {
   border-top: 1px solid black;
 }
 
@@ -54,11 +88,24 @@
   width: auto;
   display: flex;
   justify-content: center;
+  animation-name: title-animation;
+  animation-duration: 7s; 
+  animation-fill-mode: forwards; 
+  animation-iteration-count: infinite; 
+  animation-timing-function: linear; 
 }
 
 .nav-links {
   color: black;
   text-decoration: none;
+}
+
+@keyframes title-animation {
+  0% {opacity: 0.5; padding-left: 10px;}
+  25% {opacity: 1; padding-left: 50px;}
+  50% {opacity: 0.5; padding-left: 10px;}
+  75% {opacity: 1; padding-left: 50px;}
+  100% {opacity: 0.5; padding-left: 10px;}
 }
 
 @keyframes walk1 {
@@ -98,7 +145,7 @@
 }
 
 .sprite-card {
-  margin-top: 5vh;
+  margin-top: 1vh;
 }
 
 .enemy1, .enemy2, .enemy3 {
@@ -106,7 +153,7 @@
   max-height: 100%;
   right: -1000px;
   height: 30vh;
-  font-size: 40px;
+  font-size: 60px;
   position: absolute;
   display: block;
   animation-duration: 10s; 

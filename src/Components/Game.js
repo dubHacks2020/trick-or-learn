@@ -26,8 +26,8 @@ class Game extends React.Component {
                     </div>
                     <div>
                         < Enemy question={flashcards[0][0]} myClassName="enemy1" />
-                        < Enemy question={flashcards[2][0]} myClassName="enemy2" />
-                        < Enemy question={flashcards[1][0]} myClassName="enemy3" />
+                        < Enemy question={flashcards[1][0]} myClassName="enemy2" />
+                        < Enemy question={flashcards[2][0]} myClassName="enemy3" />
                     </div>
                 </div>
                 <div className="speech-container">
